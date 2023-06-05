@@ -78,7 +78,6 @@ public class RedisDatabase implements Database {
         return atomicValue.get();
     }
 
-
     public boolean isKeyAlreadyExists(String key) {
         if(!isConnected())
             return false;

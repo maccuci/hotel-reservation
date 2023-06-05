@@ -10,7 +10,7 @@ public class Main {
     public static void main(String[] args) {
         redisDatabaseController.connect();
 
-        new HotelController().create("Ian Silva", "Rua dos Viados", false, 24);
+        new HotelController().create("Teste", "Rua do Teste", false, 100);
     }
 
     public static RedisDatabase getRedisDatabaseController() {
