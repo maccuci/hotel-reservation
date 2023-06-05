@@ -20,9 +20,9 @@ public class MLogger {
 
     public void log(Level level, Throwable throwable, String... message) {
         if(throwable == null)
-            System.out.printf("[%s - %s] %s", prefix, level.getPrefix(), Arrays.toString(message));
+            System.out.printf("[%s - %s] %s\n", prefix, level == Level.DEFAULT ? "" : level.getPrefix(), Arrays.toString(message));
         else
-            System.out.printf("[%s - %s] %s\nError: %s", prefix, level.getPrefix(), Arrays.toString(message), throwable.getMessage());
+            System.out.printf("[%s - %s] %s\nError: %s\n", prefix, level == Level.DEFAULT ? "" : level.getPrefix(), Arrays.toString(message), throwable.getLocalizedMessage());
     }
 
     public String getPrefix() {
